@@ -15,7 +15,15 @@ connectCloudinary()
 
 // middlewares
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: [
+        'http://localhost:5173', // Local frontend development
+        'http://localhost:5174', // Local admin development
+        'https://doctor-appointment-frontend-v5hl.onrender.com', // Production frontend
+        'https://doctor-appointment-admin-xyz.onrender.com' // Production admin (update with your actual admin URL)
+    ],
+    credentials: true
+}))
 
 // api endpoints
 app.use("/api/user", userRouter)
