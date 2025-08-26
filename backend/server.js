@@ -19,8 +19,7 @@ app.use(cors({
     origin: [
         'http://localhost:5173', // Local frontend development
         'http://localhost:5174', // Local admin development
-        'https://doctor-appointment-frontend-v5hl.onrender.com', // Production frontend
-        'https://doctor-appointment-admin-oizq.onrender.com' // Production admin 
+       
     ],
     credentials: true
 }))
